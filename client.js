@@ -1,7 +1,6 @@
 const net = require("net");
 
 const connect = function () {
-
   const conn = net.createConnection({
     host: "localhost", 
     port: 50541
@@ -15,7 +14,6 @@ const connect = function () {
     conn.on("connect", (client) =>{
       console.log('Successfully connected to game server');
       conn.write('Name: CKD')  
-
     // setTimeout(() => {
     //   conn.write("Move: up");
     // }, "2000")
@@ -32,11 +30,7 @@ const connect = function () {
     //   conn.write("Move: right");
     // }, "5000")
 
-
-    
   });  
-
-  
 
   return conn;
 };
