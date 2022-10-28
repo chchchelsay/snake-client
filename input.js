@@ -14,6 +14,7 @@ const setupInput = (conn) => {
 /* handleUserInput:
 1) exits process when ctrl + c is pressed
 2) executes movement command via WASD input keys
+3) sends messages with QZ input keys
 */
 const handleUserInput = (i) => {
 
@@ -33,7 +34,13 @@ const handleUserInput = (i) => {
   if (i === "D" || i === "d") {
     connection.write("Move: right");
   }
-};
+  if (i === "Q" || i === "q") {
+    connection.write("Say: wasssup")
+  }
+  if (i === "Z" || i === "z") {
+    connection.write("Say: pwned")
+  }
+  };
 
 module.exports = {
   setupInput
