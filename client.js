@@ -7,11 +7,7 @@ const connect = function () {
   });
     conn.setEncoding("utf8");
 
-    conn.on("data", (data)=> {
-      console.log(data)
-  });
-
-    conn.on("connect", (client) =>{
+    conn.on("connect", () =>{
 //success message on connection
       console.log('Successfully connected to game server');
 //shows initials when connected
@@ -25,20 +21,3 @@ const connect = function () {
 module.exports = {
   connect
 };
-
-
-    // setTimeout(() => {
-    //   conn.write("Move: up");
-    // }, "2000")
-
-    // setTimeout(() => {
-    //   conn.write("Move: left");
-    // }, "3000")
-
-    // setTimeout(() => {
-    //   conn.write("Move: down");
-    // }, "4000")
-
-    // setTimeout(() => {
-    //   conn.write("Move: right");
-    // }, "5000")
